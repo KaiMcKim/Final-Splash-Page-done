@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kaimckim.com</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #dccca4;
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .logo-container {
+      margin-top: 20px;
+      text-align: center;
+      width: 90%;
+      max-width: 120px;
+      z-index: 10;
+    }
+
+    .logo-container img {
+      width: 71px;
+      height: 71px;
+      display: block;
+    }
+
+    .map-container {
+      position: relative;
+      width: 100%;
+      max-width: 1365px;
+      flex-shrink: 0;
+      margin-top: -20px;
+    }
+
+    .image-wrapper {
+      transform: scale(0.7) translateY(0);
+      transform-origin: top;
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .image-wrapper .map-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .btn {
+      position: absolute;
+      cursor: pointer;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: transparent;
+      transition: filter 0.3s ease, opacity 0.3s ease;
+      transform: translate(-50%, -50%);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    @media (hover: hover) {
+      .btn:hover {
+        filter: brightness(1.1);
+        opacity: 0.95;
+      }
+    }
+
+    .btn1 {
+      width: 45.4%;
+      aspect-ratio: 620 / 300;
+      top: 24.8%;
+      left: 28.5%;
+      background-image: url('https://cdn.shopify.com/s/files/1/0690/5249/8158/files/About_1.png?v=1747925321');
+    }
+
+    .btn2 {
+      width: 24%;
+      aspect-ratio: 400 / 370;
+      top: 69%;
+      left: 64.5%;
+      background-image: url('https://cdn.shopify.com/s/files/1/0690/5249/8158/files/Contact.png?v=1748009023');
+      z-index: 4;
+    }
+
+    .btn3 {
+      width: 56%;
+      aspect-ratio: 620 / 350;
+      top: 46%;
+      left: 75%;
+      background-image: url('https://cdn.shopify.com/s/files/1/0690/5249/8158/files/Shop_2.png?v=1748009709');
+      z-index: 3;
+    }
+
+    .btn4 {
+      width: 51.3%;
+      aspect-ratio: 700 / 400;
+      top: 49%;
+      left: 43.5%;
+      background-image: url('https://cdn.shopify.com/s/files/1/0690/5249/8158/files/projects.png?v=1748689514');
+      z-index: 5;
+    }
+
+    /* MOBILE: keep image centered + move logo to top center */
+    @media (max-width: 768px) {
+      html, body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .logo-container {
+        max-width: 100px;
+        margin: 0 0 20px 0;
+        order: -1;
+        align-self: center;
+      }
+
+      .map-container {
+        max-width: 100%;
+        width: 95%;
+        margin-top: 0;
+      }
+
+      .image-wrapper {
+        transform: scale(1.3) translateY(0);
+        max-width: 400px;
+        margin: 0 auto;
+        position: relative;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-container {
+        max-width: 80px;
+      }
+
+      .image-wrapper {
+        transform: scale(1.3) translateY(0);
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-container">
+    <img src="https://cdn.shopify.com/s/files/1/0690/5249/8158/files/New_logo6.png?v=1750190377" alt="Logo" />
+  </div>
+
+  <div class="map-container">
+    <div class="image-wrapper">
+      <img src="https://cdn.shopify.com/s/files/1/0690/5249/8158/files/ConvertOut-Resized-background_1.jpg?v=1748001259" alt="Architectural Map" class="map-img" />
+      <a href="https://z0nsad-z1.myshopify.com/pages/about" class="btn btn1" title="About"></a>
+      <a href="https://z0nsad-z1.myshopify.com/pages/contact" class="btn btn2" title="Contact"></a>
+      <a href="https://z0nsad-z1.myshopify.com/collections/all" class="btn btn3" title="Shop"></a>
+      <a href="https://z0nsad-z1.myshopify.com/pages/projects" class="btn btn4" title="Projects"></a>
+    </div>
+  </div>
+</body>
+</html>
